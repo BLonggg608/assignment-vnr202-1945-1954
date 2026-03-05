@@ -15,9 +15,9 @@
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.24",
-    "next": "15.5.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",
     "scrollreveal": "^4.0.9",
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "eslint-config-next": "^16.1.6",
     "tailwindcss": "^4"
   }
 }
