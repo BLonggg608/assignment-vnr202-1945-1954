@@ -33,7 +33,7 @@ export default function NorthSection() {
 
         <Card
           title="Quyết nghị Đại hội"
-          bordered={false}
+          variant="borderless"
           style={{ marginBottom: "2rem" }}
         >
           <ul>

@@ -7,7 +7,7 @@ import "./HomeButton.css";
 export default function HomeButton() {
   const handleHomeClick = () => {
     // Force full page reload to ensure CSS is loaded properly
-    window.location.href = "/assignment-vnr202";
+    window.location.href = "/";
   };
 
   return (

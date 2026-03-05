@@ -29,9 +29,9 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-20 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
       <Header headerContent={headerContent} />
-      <motion.div
+      {/* <motion.div
         style={{
           rotateX,
           rotateZ,
@@ -54,7 +54,7 @@ export const HeroParallax = ({
             <ProductCard product={product} translate={translateX} key={product.title} />
           ))}
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
@@ -109,7 +109,7 @@ export const Header = ({ headerContent }) => {
       )}
 
       {/* Learning Outcomes */}
-      {headerContent?.clo2 && headerContent?.clo4 && (
+      {/* {headerContent?.clo2 && headerContent?.clo4 && (
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--museum-beige)] border-2 border-[var(--lacquer-red)]">
             <span className="font-bold text-[var(--lacquer-red)]">CLO2</span>
@@ -124,7 +124,7 @@ export const Header = ({ headerContent }) => {
             </span>
           </div>
         </div>
-      )}
+      )} */}
 
       <div className="flex items-center justify-center gap-4 text-[var(--museum-brown)]">
         <div className="h-px w-12 bg-[var(--lacquer-gold)]"></div>

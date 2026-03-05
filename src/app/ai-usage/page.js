@@ -20,7 +20,7 @@ export default function AIUsagePage() {
           <div className="project-info">
             <p>Dự án: Lịch sử Đảng Cộng sản Việt Nam</p>
             <p>VNR202 - Nhóm 3 - Half_2 GD1815</p>
-            <p className="meta">Ngày: 01/11/2025</p>
+            {/* <p className="meta">Ngày: 01/11/2025</p> */}
           </div>
         </section>
 
@@ -33,19 +33,19 @@ export default function AIUsagePage() {
             <p>
               <strong>Link sản phẩm:</strong>{" "}
               <a
-                href="https://codecuatienne.github.io/assignment-vnr202/"
+                href="https://assignment-vnr202-1945-1954.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
-                codecuatienne.github.io/assignment-vnr202
+                assignment-vnr202-1945-1954.vercel.app
               </a>
             </p>
             <p>
               <strong>Công nghệ:</strong> Website xây dựng bằng Next.js
             </p>
             <p>
-              <strong>Chủ đề:</strong> Lịch sử Đảng Cộng sản Việt Nam trong
-              Kháng chiến Chống Mỹ
+              <strong>Chủ đề:</strong> Lịch sử Đảng Cộng sản Việt Nam trong giai
+              đoạn 1945 - 1954
             </p>
           </div>
         </section>
@@ -78,11 +78,17 @@ export default function AIUsagePage() {
                 </td>
                 <td className="tool-name">Google Gemini</td>
                 <td>
-                  <strong>Chatbox trên website:</strong> Trả lời câu hỏi người
-                  dùng về lịch sử Đảng
+                  <tr>
+                    <strong>Chatbox trên website:</strong> Trả lời câu hỏi người
+                    dùng về lịch sử Đảng
+                  </tr>
+                  <tr>
+                    <strong>Tổ chức tài liệu:</strong> Phân tích và tổng hợp
+                    thông tin lịch sử từ giáo trình
+                  </tr>
                 </td>
               </tr>
-              <tr>
+              {/* <tr>
                 <td className="tool-logo">
                   <img
                     src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7woc0Rqy5tfi8MGhUVLLswXfrqay2oH9e36Wpq37QM6bsR5WJIWAO_cTw7aIz6quqphauxZ6LTZQNnYWtben5gvKf-NNbXwK3duJBpIam-JTuIoNDg6p4ujmrUPMbkhyphenhyphenAPLvhe09-SQ95pgBMbYyEwIw9IeY8BgqtCjORkPq5kz_K_fYYq1fSRsebixN1/w1200-h630-p-k-no-nu/NotebookLM-logo.jpg"
@@ -93,9 +99,9 @@ export default function AIUsagePage() {
                 <td className="tool-name">NotebookLM</td>
                 <td>
                   <strong>Tổ chức tài liệu:</strong> Phân tích và tổng hợp thông
-                  tin lịch sử từ nhiều nguồn
+                  tin lịch sử từ giáo trình
                 </td>
-              </tr>
+              </tr> */}
             </tbody>
           </table>
 
@@ -128,18 +134,31 @@ export default function AIUsagePage() {
               <tr>
                 <td className="tool-logo">
                   <img
-                    src="https://freepnglogo.com/images/all_img/claude-ai-logo-d862.png"
-                    alt="Claude"
-                    className="logo-img logo-claude"
+                    src="https://freepnglogo.com/images/all_img/1728457808_Google_Gemini_logo_PNG.png"
+                    alt="Gemini"
+                    className="logo-img logo-gemini"
                   />
                 </td>
-                <td className="tool-name">Claude Sonnet 4.5</td>
+                <td className="tool-name">Google Gemini</td>
                 <td>
-                  <strong>Tư vấn kỹ thuật:</strong> Thiết kế cấu trúc website và
-                  giải quyết vấn đề
+                  <tr>
+                    <strong>Tư vấn kỹ thuật:</strong> Thiết kế cấu trúc website và
+                    giải quyết vấn đề
+                  </tr>
+                  <tr>
+                    <strong>Nội dung & Giao diện:</strong> Viết mô tả và tạo ý
+                    tưởng thiết kế
+                  </tr>
+                  <tr>
+                    <strong>Nghiên cứu:</strong> Tìm hiểu công nghệ mới và so sánh
+                    giải pháp
+                  </tr>
+                  <tr>
+                    <strong>Ảnh:</strong> Tô màu hình ảnh trắng đen lịch sử cho website
+                  </tr>
                 </td>
               </tr>
-              <tr>
+              {/* <tr>
                 <td className="tool-logo">
                   <img
                     src="https://pnggallery.com/wp-content/uploads/chatgpt-05.png"
@@ -152,8 +171,8 @@ export default function AIUsagePage() {
                   <strong>Nội dung & Giao diện:</strong> Viết mô tả và tạo ý
                   tưởng thiết kế
                 </td>
-              </tr>
-              <tr>
+              </tr> */}
+              {/* <tr>
                 <td className="tool-logo">
                   <img
                     src="https://static.cnbetacdn.com/article/2025/0224/dcab1db41d8216a.webp"
@@ -166,7 +185,7 @@ export default function AIUsagePage() {
                   <strong>Nghiên cứu:</strong> Tìm hiểu công nghệ mới và so sánh
                   giải pháp
                 </td>
-              </tr>
+              </tr> */}
             </tbody>
           </table>
           <div className="divider" />
@@ -181,7 +200,7 @@ export default function AIUsagePage() {
           <div className="workflow-step">
             <h3 className="step-title">Bước 1: Nghiên cứu Tài liệu</h3>
             <p>
-              Sử dụng <strong>NotebookLM</strong> để tổ chức và phân tích tài
+              Sử dụng <strong>Google Gemini</strong> để tổ chức và phân tích tài
               liệu lịch sử Đảng từ nhiều nguồn. Nhóm kiểm tra và xác minh độ
               chính xác của thông tin.
             </p>
@@ -191,13 +210,14 @@ export default function AIUsagePage() {
             <h3 className="step-title">Bước 2: Xây dựng Website</h3>
             <p>
               Nhóm làm việc với{" "}
-              <strong>GitHub Copilot, Claude, ChatGPT và Grok</strong> để:
+              <strong>GitHub Copilot, Google Gemini</strong> để:
             </p>
             <ul className="simple-list">
               <li>Thiết kế giao diện website</li>
               <li>Viết code và tối ưu hiệu suất</li>
               <li>Tích hợp chatbox Gemini</li>
               <li>Tạo nội dung và mô tả</li>
+              <li>Tô màu hình ảnh</li>
             </ul>
           </div>
 

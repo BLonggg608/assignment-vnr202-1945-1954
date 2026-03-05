@@ -37,15 +37,19 @@ export default function MuseumHero() {
           <span>1945 – 1954</span>
         </div>
 
+        <Title level={2} className="hero-subtitle">
+          Nội dung
+        </Title>
+
         <div className="hero-learning-outcomes">
           <div className="outcome-badge">
-            <span className="outcome-label">CLO1</span>
+            {/* <span className="outcome-label">CLO1</span> */}
             <span className="outcome-text">
               Phân tích bối cảnh "ngàn cân treo sợi tóc"
             </span>
           </div>
           <div className="outcome-badge">
-            <span className="outcome-label">CLO2</span>
+            {/* <span className="outcome-label">CLO2</span> */}
             <span className="outcome-text">
               Nắm vững đường lối và các chiến dịch lớn
             </span>

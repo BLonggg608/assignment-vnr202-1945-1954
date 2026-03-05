@@ -71,10 +71,12 @@ export default function StrategySection() {
             <Card
               key={i}
               title={p.name}
-              bordered={false}
+              variant="borderless"
               className="principle-card"
-              headStyle={{ color: "#b71c1c", fontWeight: "bold" }}
-              bodyStyle={{ background: "#fff8e1" }}
+              styles={{
+                header: { color: "#b71c1c", fontWeight: "bold" },
+                body: { background: "#fff8e1" },
+              }}
             >
               {p.desc}
             </Card>
@@ -100,36 +102,48 @@ export default function StrategySection() {
           </div>
         </ScrollReveal>
 
-        <Timeline mode="alternate" style={{ marginTop: "2rem" }}>
-          <Timeline.Item color="green" label="Thu Đông 1947">
-            <Card title="Chiến dịch Việt Bắc" size="small">
-              <p>
-                <strong>Bối cảnh:</strong>{" "}
-                {section23?.content?.viet_bac_1947?.context}
-              </p>
-              <p>
-                <strong>Kết quả:</strong>{" "}
-                {section23?.content?.viet_bac_1947?.result}
-              </p>
-            </Card>
-          </Timeline.Item>
-          <Timeline.Item color="red" label="Thu Đông 1950">
-            <Card title="Chiến dịch Biên Giới" size="small">
-              <p>
-                <strong>Bối cảnh:</strong>{" "}
-                {section23?.content?.bien_gioi_1950?.context}
-              </p>
-              <p>
-                <strong>Hành động:</strong>{" "}
-                {section23?.content?.bien_gioi_1950?.action}
-              </p>
-              <p>
-                <strong>Kết quả:</strong>{" "}
-                {section23?.content?.bien_gioi_1950?.result}
-              </p>
-            </Card>
-          </Timeline.Item>
-        </Timeline>
+        <Timeline
+          mode="alternate"
+          style={{ marginTop: "2rem" }}
+          items={[
+            {
+              color: "green",
+              label: "Thu Đông 1947",
+              children: (
+                <Card title="Chiến dịch Việt Bắc" size="small">
+                  <p>
+                    <strong>Bối cảnh:</strong>{" "}
+                    {section23?.content?.viet_bac_1947?.context}
+                  </p>
+                  <p>
+                    <strong>Kết quả:</strong>{" "}
+                    {section23?.content?.viet_bac_1947?.result}
+                  </p>
+                </Card>
+              ),
+            },
+            {
+              color: "red",
+              label: "Thu Đông 1950",
+              children: (
+                <Card title="Chiến dịch Biên Giới" size="small">
+                  <p>
+                    <strong>Bối cảnh:</strong>{" "}
+                    {section23?.content?.bien_gioi_1950?.context}
+                  </p>
+                  <p>
+                    <strong>Hành động:</strong>{" "}
+                    {section23?.content?.bien_gioi_1950?.action}
+                  </p>
+                  <p>
+                    <strong>Kết quả:</strong>{" "}
+                    {section23?.content?.bien_gioi_1950?.result}
+                  </p>
+                </Card>
+              ),
+            },
+          ]}
+        />
       </div>
     </div>
   );

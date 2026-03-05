@@ -80,13 +80,20 @@ export default function VictorySection() {
         </ScrollReveal>
 
         <div style={{ marginTop: "2rem" }}>
-          <Row gutter={[16, 16]}>
+          <Row
+            gutter={[16, 16]}
+            style={{ display: "flex", alignItems: "stretch" }}
+          >
             {section52?.content?.lessons?.map((lesson, idx) => (
-              <Col xs={24} sm={12} key={idx}>
+              <Col xs={24} sm={12} key={idx} style={{ display: "flex" }}>
                 <Card
                   size="small"
-                  style={{ borderLeft: "4px solid #52c41a" }}
-                  bodyStyle={{ padding: "1rem" }}
+                  style={{
+                    borderLeft: "4px solid #52c41a",
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  styles={{ body: { padding: "1rem", height: "100%" } }}
                 >
                   <div
                     style={{

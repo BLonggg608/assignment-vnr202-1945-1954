@@ -8,6 +8,7 @@ import { InfoCircleOutlined } from "@ant-design/icons";
 import { Button, Image, Modal } from "antd";
 import { useState } from "react";
 import "./FoundationSection.css";
+import { Asset } from "next/font/google";
 
 export default function FoundationSection() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -76,13 +77,15 @@ export default function FoundationSection() {
               </div>
 
               <div className="image-content">
-                <ARImage
-                  src="https://upload.wikimedia.org/wikipedia/commons/2/23/Nan_doi_nam_1945.jpg"
+                <Image
+                  src="/images/nan_doi.png"
                   alt="Nạn đói năm 1945"
                   preview={true}
                   style={{ width: "100%", borderRadius: "8px" }}
-                  caption="Nạn đói năm Ất Dậu 1945 - Thảm cảnh đau lòng"
                 />
+                <p className="image-caption">
+                  Nạn đói năm 1945 cướp đi sinh mạng của hàng triệu người
+                </p>
               </div>
             </div>
           </div>
@@ -115,7 +118,7 @@ export default function FoundationSection() {
               </div>
               <div className="image-content">
                 <Image
-                  src="https://media.vov.vn/sites/default/files/styles/large/public/2021-08/19-8-mit-tinh-o-ha-noi1.jpg"
+                  src="/images/cmt8_1945.png"
                   alt="Mít tinh Cách mạng tháng Tám"
                   preview={true}
                   style={{ width: "100%", borderRadius: "8px" }}
@@ -140,7 +143,19 @@ export default function FoundationSection() {
 
         <ScrollReveal variant="fadeUp" delay={0.3}>
           <div className="dual-strategy-container">
-            <h4 className="strategy-main-title">
+            <h4
+              style={{
+                fontSize: "1.75rem",
+                fontWeight: "700",
+                color: "#b71c1c",
+                marginBottom: "2rem",
+                textTransform: "uppercase",
+                letterSpacing: "1.5px",
+                borderBottom: "3px solid #d4af37",
+                paddingBottom: "10px",
+                display: "inline-block",
+              }}
+            >
               Chỉ thị "Kháng chiến kiến quốc"
             </h4>
             <div className="strategies-grid">
@@ -151,11 +166,13 @@ export default function FoundationSection() {
                 </div>
                 <div className="card-body">
                   <ul className="challenges-list">
-                    {section12?.content?.strategic_direction?.map((item, idx) => (
-                      <li key={idx} style={{ marginBottom: "8px" }}>
-                        {item}
-                      </li>
-                    ))}
+                    {section12?.content?.strategic_direction?.map(
+                      (item, idx) => (
+                        <li key={idx} style={{ marginBottom: "8px" }}>
+                          {item}
+                        </li>
+                      ),
+                    )}
                   </ul>
                 </div>
                 <div style={{ paddingBottom: "20px" }} />
@@ -295,7 +312,7 @@ export default function FoundationSection() {
             </div>
             <div style={{ marginTop: "2rem", textAlign: "center" }}>
               <Image
-                src="https://image.vov.vn/w500/uploaded/8qj40c7y0l1r8y84iu5a/2021_03_06/h1_brmu.jpg"
+                src="/images/hiep_dinh_so_bo.png"
                 alt="Chủ tịch Hồ Chí Minh ký Hiệp định Sơ bộ 6/3/1946"
                 preview={true}
                 style={{ maxWidth: "600px", borderRadius: "8px" }}

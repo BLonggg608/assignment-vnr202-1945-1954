@@ -3,7 +3,7 @@
 import HeroSection from "@/component/layout/dashboard/sections/hero-section";
 
 export default function Dashboard() {
-  // Historical images from the Vietnam War era (1954-1975)
+  // Historical images from the Vietnam War era (1945-1954)
   const historicalImages = [
     {
       title: "Hiệp định Giơnevơ 1954",
@@ -86,15 +86,16 @@ export default function Dashboard() {
     {
       title: "Thư Viện Lịch Sử",
       description:
-        "Khám phá tài liệu và hình ảnh lịch sử kháng chiến 1954-1975",
+        "Khám phá tài liệu lịch sử kháng chiến 1945-1954",
       link: "/library",
       icon: "BookOutlined",
       color: "lacquer-red",
     },
     {
-      title: "Trắc Nghiệm Lịch Sử",
-      description: "Kiểm tra kiến thức về cuộc kháng chiến chống Mỹ",
-      link: "https://play.blooket.com/play",
+      title: "Trò chơi",
+      description:
+        "Xếp hình các ảnh lịch sử và và ôn tập kiến thức sau khi hoàn thành",
+      link: "https://nghiaapd.github.io/vnr202-game/",
       icon: "EditOutlined",
       color: "jade-green",
     },

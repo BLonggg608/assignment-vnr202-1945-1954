@@ -1,4 +1,4 @@
-# UI Design Convention - Thư viện Lịch sử Đảng CSVN (1954-1975)
+# UI Design Convention - Thư viện Lịch sử Đảng CSVN (1945-1954)
 
 ## 📋 Tổng quan Convention
 

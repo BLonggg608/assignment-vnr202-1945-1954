@@ -60,8 +60,14 @@ export default function MuseumFooter() {
                       gap: "8px",
                     }}
                   >
-                    <strong style={{ minWidth: "50px" }}>{obj.code}:</strong>
-                    <span>{obj.vi}</span>
+                    {/* <strong style={{ minWidth: "50px" }}>{obj.code}:</strong> */}
+                    {/* <span>{obj.vi}</span> */}
+                    <p
+                      className="footer-text"
+                      style={{ fontWeight: "bold", marginBottom: "0.5rem" }}
+                    >
+                      {obj.vi}
+                    </p>
                   </li>
                 ))}
               </ul>

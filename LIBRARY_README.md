@@ -2,7 +2,7 @@
 
 ## Tổng quan
 
-Trang web thư viện học thuật về Lịch sử Đảng Cộng sản Việt Nam giai đoạn 1954-1975, được thiết kế với giao diện hiện đại, tối giản, thấm đượm bản sắc văn hóa Việt Nam.
+Trang web thư viện học thuật về Lịch sử Đảng Cộng sản Việt Nam giai đoạn 1945-1954, được thiết kế với giao diện hiện đại, tối giản, thấm đượm bản sắc văn hóa Việt Nam.
 
 ## Cấu trúc Component
 

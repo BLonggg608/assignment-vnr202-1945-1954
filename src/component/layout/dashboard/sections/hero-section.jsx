@@ -52,19 +52,19 @@ export default function HeroSection({ historicalImages, navigationCards }) {
         <HeroParallax
           products={historicalImages}
           headerContent={{
-            badge: "VNR202 - Nhóm 3 - Haft_2 GD1815",
+            badge: "VNR202 - Nhóm 3 - Haft_2 GD1815", // Giữ nguyên thông tin lớp/nhóm của bạn
             mainTitle:
-              "Sự Lãnh đạo Độc lập, Sáng tạo của Đảng Cộng sản Việt Nam",
+              "Sự Lãnh đạo của Đảng Cộng sản Việt Nam",
             subtitle:
-              "Trong Kháng chiến Chống Mỹ và Hoàn thành Thống nhất Đất nước",
-            clo2: "Phân tích sự lãnh đạo của Đảng trong kháng chiến chống Mỹ",
-            clo4: "Củng cố niềm tin vào sự lãnh đạo của Đảng",
+              "Trong Giai đoạn Xây dựng, Bảo vệ Chính quyền và Kháng chiến Chống Pháp (1945 - 1954)",
+            clo2: "Phân tích sự lãnh đạo của Đảng đối với cách mạng Việt Nam (1945 - 1954)",
+            clo4: "Củng cố niềm tin và lòng tự hào vào sự lãnh đạo của Đảng",
           }}
         />
       </div>
 
       {/* Start Exploring Button - After scrolling through images */}
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 pt-48 sm:pt-56 lg:pt-64 pb-12 sm:pb-16 text-center bg-[var(--museum-cream)]">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center bg-[var(--museum-cream)]">
         <div className="max-w-7xl mx-auto">
           {!showOptions ? (
             <Button
@@ -112,9 +112,9 @@ export default function HeroSection({ historicalImages, navigationCards }) {
                         </p>
 
                         {/* Arrow indicator */}
-                        <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 text-white text-xl sm:text-2xl opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+                        {/* <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 text-white text-xl sm:text-2xl opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
                           →
-                        </div>
+                        </div> */}
                       </div>
 
                       {/* Decorative corner */}
@@ -135,11 +135,11 @@ export default function HeroSection({ historicalImages, navigationCards }) {
       <div className="relative z-10 bg-[var(--museum-beige)] py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-base sm:text-lg text-[var(--museum-dark-brown)] max-w-4xl mx-auto leading-relaxed">
-            Từ Hiệp định Giơnevơ 1954 đến ngày Giải phóng hoàn toàn miền Nam,
-            thống nhất đất nước 30/4/1975, dưới sự lãnh đạo sáng suốt của Đảng
-            Cộng sản Việt Nam, nhân dân ta đã vượt qua mọi thử thách, đánh bại
-            kẻ thù hùng mạnh nhất hành tinh, góp phần vào sự nghiệp đấu tranh
-            giải phóng dân tộc trên toàn thế giới.
+            Từ những ngày đầu bảo vệ chính quyền non trẻ trong tình thế "ngàn cân treo sợi tóc" năm 1945, 
+            đến Chiến thắng Điện Biên Phủ "lừng lẫy năm châu, chấn động địa cầu" và Hiệp định Giơ-ne-vơ năm 1954. 
+            Dưới sự lãnh đạo sáng suốt của Đảng Cộng sản Việt Nam và Chủ tịch Hồ Chí Minh, nhân dân ta đã trải qua 
+            9 năm trường kỳ kháng chiến, đập tan hoàn toàn ách thống trị của thực dân Pháp, mở ra kỷ nguyên độc lập 
+            và cổ vũ mạnh mẽ phong trào giải phóng dân tộc trên toàn thế giới.
           </p>
         </div>
       </div>

@@ -158,7 +158,7 @@ export default function TestAI() {
 
   const switchSession = (sessionId) => {
     setSessions((prev) =>
-      prev.map((s) => ({ ...s, active: s.id === sessionId }))
+      prev.map((s) => ({ ...s, active: s.id === sessionId })),
     );
     // In a real app, you'd load messages for this session
     setMessages([]);
@@ -322,7 +322,7 @@ export default function TestAI() {
                 // Welcome Screen
                 <div className="welcome-screen">
                   <div className="welcome-title">
-                    Sự Lãnh đạo của Đảng Cộng sản Việt Nam (1954-1975)
+                    Sự Lãnh đạo của Đảng Cộng sản Việt Nam (1945-1954)
                   </div>
                   <div className="welcome-subtitle">
                     Trợ lý AI chuyên về lịch sử Đảng trong cuộc kháng chiến

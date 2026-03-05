@@ -41,7 +41,7 @@ export default function SouthSection() {
           <Col xs={24} md={12}>
             <Card
               title="Pháo đài bất khả xâm phạm"
-              bordered={false}
+              variant="borderless"
               style={{ height: "100%" }}
             >
               <Paragraph>{section41?.content?.position}</Paragraph>
@@ -103,13 +103,13 @@ export default function SouthSection() {
           title="Nội dung hiệp định (21/7/1954)"
           style={{ marginTop: "1rem" }}
         >
-          <Timeline>
-            {section42?.content?.terms?.map((term, i) => (
-              <Timeline.Item key={i} color="blue">
-                {term}
-              </Timeline.Item>
-            ))}
-          </Timeline>
+          <Timeline
+            items={section42?.content?.terms?.map((term, i) => ({
+              key: i,
+              color: "blue",
+              children: term,
+            }))}
+          />
           <div
             style={{
               marginTop: "1rem",

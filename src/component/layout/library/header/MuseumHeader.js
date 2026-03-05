@@ -27,11 +27,11 @@ export default function MuseumHeader({ activeSection, setActiveSection }) {
       <div className="header-container">
         {/* Brand Section */}
         <div className="header-brand">
-          <img
+          {/* <img
             src="https://file3.qdnd.vn/data/images/0/2025/04/03/upload_2049/lo-go.jpg"
             alt="Logo Đảng"
             className="header-logo"
-          />
+          /> */}
           <div className="header-title-group">
             <h1 className="header-title">Lịch sử Đảng Cộng sản Việt Nam</h1>
             <p className="header-subtitle">
@@ -51,11 +51,11 @@ export default function MuseumHeader({ activeSection, setActiveSection }) {
         />
 
         {/* Mobile Menu Button */}
-        <Button
+        {/* <Button
           type="text"
           icon={<MenuOutlined />}
           className="menu-mobile-btn"
-        />
+        /> */}
       </div>
     </Header>
   );

@@ -2,7 +2,7 @@
 
 ## Tổng quan
 
-Trang dashboard đã được refactor hoàn toàn để phù hợp với chủ đề lịch sử kháng chiến chống Mỹ (1954-1975), thay thế cho trang MuseumHero.js cũ.
+Trang dashboard đã được refactor hoàn toàn để phù hợp với chủ đề lịch sử kháng chiến chống Mỹ (1945-1954), thay thế cho trang MuseumHero.js cũ.
 
 ## Các thay đổi chính
 
