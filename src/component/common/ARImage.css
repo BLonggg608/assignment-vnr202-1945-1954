@@ -1,0 +1,106 @@
+/* AR Image Container */
+.ar-image-container {
+  position: relative;
+  width: 100%;
+}
+
+/* AR Image Wrapper with Glowing Animation */
+.ar-image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  cursor: help;
+}
+
+.ar-enabled-image {
+  width: 100%;
+  animation: glowPulse 2s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glowing Yellow Shadow Animation */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 10px rgba(255, 215, 0, 0.4),
+      0 0 20px rgba(255, 215, 0, 0.3),
+      0 0 30px rgba(255, 215, 0, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(255, 215, 0, 0.6),
+      0 0 30px rgba(255, 215, 0, 0.5),
+      0 0 40px rgba(255, 215, 0, 0.4),
+      0 0 50px rgba(255, 215, 0, 0.3);
+  }
+}
+
+/* Hover Effect */
+.ar-image-wrapper:hover .ar-enabled-image {
+  transform: scale(1.02);
+  box-shadow:
+    0 0 25px rgba(255, 215, 0, 0.7),
+    0 0 35px rgba(255, 215, 0, 0.6),
+    0 0 45px rgba(255, 215, 0, 0.5),
+    0 0 55px rgba(255, 215, 0, 0.4);
+}
+
+/* QR Code Tooltip Content */
+.ar-qr-tooltip {
+  text-align: center;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+}
+
+.qr-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1890ff;
+  margin-bottom: 12px;
+}
+
+.qr-instruction {
+  font-size: 13px;
+  color: #666;
+  margin-top: 12px;
+  max-width: 220px;
+  line-height: 1.4;
+}
+
+/* Tooltip Overlay Styling */
+.ar-qr-tooltip-overlay .ant-tooltip-inner {
+  background-color: white;
+  padding: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.ar-qr-tooltip-overlay .ant-tooltip-arrow-content {
+  --antd-arrow-background-color: white;
+}
+
+/* Image Caption */
+.ar-image-container .image-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .qr-title {
+    font-size: 14px;
+  }
+
+  .qr-instruction {
+    font-size: 12px;
+    max-width: 180px;
+  }
+
+  .ar-qr-tooltip img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}

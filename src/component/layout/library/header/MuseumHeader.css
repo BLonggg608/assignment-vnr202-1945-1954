@@ -1,0 +1,154 @@
+.museum-header {
+  background: var(--lacquer-red) !important;
+  border-bottom: 3px solid var(--lacquer-gold);
+  padding: 0 2rem !important;
+  height: auto !important;
+  line-height: normal !important;
+  box-shadow: 0 4px 12px rgba(139, 26, 26, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background: white;
+  padding: 3px;
+  border-radius: 50%;
+  border: 2px solid var(--lacquer-gold);
+}
+
+.header-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  font-family: "Fraunces", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.header-subtitle {
+  font-family: "Fraunces", serif;
+  font-size: 0.75rem;
+  color: var(--lacquer-gold);
+  margin: 0;
+  font-weight: 500;
+}
+
+.header-menu {
+  background: transparent !important;
+  border: none !important;
+  flex: 1;
+  justify-content: center;
+}
+
+.header-menu .ant-menu-item {
+  font-family: "Fraunces", serif;
+  color: white !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-bottom: 3px solid transparent !important;
+  transition: all 0.3s ease;
+}
+
+.header-menu .ant-menu-item:hover {
+  color: var(--lacquer-gold) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.header-menu .ant-menu-item-selected {
+  color: var(--lacquer-gold) !important;
+  border-bottom-color: var(--lacquer-gold) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.menu-mobile-btn {
+  display: none;
+  color: white !important;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .header-menu .ant-menu-item {
+    font-size: 0.8rem;
+    padding: 0 0.7rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-title {
+    font-size: 1rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .menu-mobile-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .museum-header {
+    padding: 0 1rem !important;
+  }
+
+  .header-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header-brand {
+    gap: 0.8rem;
+  }
+
+  .header-title {
+    font-size: 0.9rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 0.8rem;
+  }
+
+  .header-subtitle {
+    display: none;
+  }
+
+  .header-logo {
+    width: 30px;
+    height: 30px;
+  }
+}

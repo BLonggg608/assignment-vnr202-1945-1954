@@ -1,0 +1,284 @@
+.museum-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--lacquer-red) 0%, #6b1212 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(212, 175, 55, 0.03) 35px,
+    rgba(212, 175, 55, 0.03) 70px
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 1200px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--lacquer-gold);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  animation: slideIn 0.8s ease-out 0.3s both;
+}
+
+.badge-icon {
+  color: var(--lacquer-gold);
+  font-size: 1.2rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-main-title,
+.hero-main-title.ant-typography,
+h1.hero-main-title,
+.museum-hero .hero-main-title,
+.ant-typography.hero-main-title {
+  font-family: "Fraunces", serif !important;
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  color: white !important;
+  margin: 0 0 2rem 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 2rem !important;
+  line-height: 1.2 !important;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4) !important;
+  animation: fadeInUp 1s ease-out 0.4s both !important;
+  display: block !important;
+}
+
+.hero-divider {
+  margin: 2rem 0;
+  animation: fadeIn 1s ease-out 0.6s both;
+}
+
+.divider-star {
+  font-size: 2.5rem;
+  color: var(--lacquer-gold);
+  display: inline-block;
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-subtitle,
+.hero-subtitle.ant-typography,
+h2.hero-subtitle,
+.museum-hero .hero-subtitle,
+.ant-typography.hero-subtitle {
+  font-family: "Fraunces", serif !important;
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  color: var(--lacquer-gold) !important;
+  margin: 2rem 0 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  line-height: 1.4 !important;
+  animation: fadeInUp 1s ease-out 0.8s both !important;
+  display: block !important;
+}
+
+.hero-years {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  background: rgba(212, 175, 55, 0.2);
+  padding: 1rem 3rem;
+  border-radius: 60px;
+  border: 3px solid var(--lacquer-gold);
+  margin: 2rem 0;
+  letter-spacing: 0.15em;
+  animation: fadeInUp 1s ease-out 1s both;
+}
+
+.years-icon {
+  font-size: 2.5rem;
+  color: var(--lacquer-gold);
+}
+
+.hero-description {
+  font-family: "Fraunces", serif !important;
+  font-size: 1.4rem !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  margin: 2.5rem 0 !important;
+  font-weight: 500;
+  font-style: italic;
+  animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.hero-learning-outcomes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 1.4s both;
+}
+
+.outcome-badge {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border: 2px solid var(--lacquer-gold);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 450px;
+  transition: all 0.3s ease;
+}
+
+.outcome-badge:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+}
+
+.outcome-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--lacquer-gold);
+  background: rgba(212, 175, 55, 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  align-self: flex-start;
+}
+
+.outcome-text {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+  text-align: left;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .hero-main-title {
+    font-size: 3rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem !important;
+  }
+
+  .hero-years {
+    font-size: 1.6rem;
+    padding: 0.8rem 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .museum-hero {
+    min-height: 90vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-main-title {
+    font-size: 2.2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-years {
+    font-size: 1.3rem;
+    padding: 0.7rem 2rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem !important;
+  }
+
+  .hero-learning-outcomes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .outcome-badge {
+    max-width: 100%;
+    padding: 1.2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-main-title {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+
+  .hero-years {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .hero-badge {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .divider-star {
+    font-size: 2rem;
+  }
+}

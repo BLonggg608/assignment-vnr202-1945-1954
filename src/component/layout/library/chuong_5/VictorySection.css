@@ -1,0 +1,540 @@
+/* VictorySection.css */
+
+.victory-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--lacquer-gold);
+}
+
+.subsection-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  height: 3rem;
+  background: var(--lacquer-red);
+  color: white;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.subsection-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin: 0;
+  flex: 1;
+}
+
+/* Significance Block */
+.overall-significance {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-gold);
+  margin-bottom: 3rem;
+}
+
+.significance-text {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--ink-black);
+  font-weight: 600;
+  margin: 0;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.achievement-card {
+  padding: 0;
+  background: transparent;
+  transition: transform 0.2s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-1px);
+}
+
+.achievement-aspect {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--jade-green);
+  display: inline-block;
+}
+
+.achievement-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.achievement-impact {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--jade-green);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.congress-assessment {
+  padding: 0;
+  background: transparent;
+  margin-top: 2rem;
+}
+
+.congress-assessment h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.assessment-quote {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  font-style: italic;
+  color: var(--ink-black);
+  border-left: 4px solid var(--lacquer-gold);
+  padding-left: 2rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Causes Block */
+.primary-cause {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--jade-green);
+  margin-bottom: 3rem;
+}
+
+.primary-cause p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  font-weight: 600;
+  margin: 0;
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.factor-card {
+  padding: 0;
+  background: transparent;
+}
+
+.factor-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.factor-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.evidence-list {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.evidence-list li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.statistics {
+  padding: 0 0 0 1.5rem;
+  background: transparent;
+  border-left: 3px solid var(--jade-green);
+  margin-top: 1rem;
+}
+
+.statistics p {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Lessons Block */
+.lessons-block {
+  margin-top: 4rem;
+}
+
+.lessons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.lesson-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2.5rem;
+  padding: 0;
+  background: transparent;
+}
+
+.lesson-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--lacquer-red);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 900;
+  border-radius: 8px;
+}
+
+.lesson-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.lesson-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.components-list {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.components-list li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+/* Orientation Block (Section 5.4) */
+.orientation-block {
+  margin-top: 4rem;
+}
+
+.orientation-header .subsection-number {
+  background: var(--jade-green);
+}
+
+.orientation-title {
+  color: var(--jade-green);
+}
+
+/* Overall Message */
+.overall-message {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-gold);
+  margin-bottom: 3rem;
+}
+
+.message-text {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--ink-black);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Historical Sites */
+.historical-sites {
+  margin-bottom: 4rem;
+}
+
+.sites-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--lacquer-red);
+}
+
+.sites-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.site-card {
+  padding: 0;
+  background: transparent;
+  transition: transform 0.2s ease;
+}
+
+.site-card:hover {
+  transform: translateY(-1px);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--jade-green);
+}
+
+.site-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin: 0;
+}
+
+.site-classification {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--lacquer-red);
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.site-info p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.site-description {
+  font-style: italic;
+  color: var(--museum-brown);
+}
+
+.site-significance {
+  color: var(--jade-green);
+  font-weight: 600;
+}
+
+.historical-moment {
+  padding: 1rem 0 1rem 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-gold);
+  margin-top: 2rem;
+}
+
+.historical-moment h6 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.historical-moment p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.sites-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Youth Message */
+.youth-message {
+  margin-bottom: 4rem;
+}
+
+.message-card {
+  padding: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.message-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.message-card h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.youth-text {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--ink-black);
+  font-weight: 600;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.anniversary-celebration {
+  margin-bottom: 4rem;
+}
+
+.anniversary-celebration h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--lacquer-red);
+  text-align: center;
+}
+
+/* Final Affirmation */
+.final-affirmation {
+  margin-bottom: 3rem;
+  padding: 0;
+  background: transparent;
+}
+
+.affirmation-content {
+  text-align: center;
+}
+
+.affirmation-icon {
+  font-size: 3rem;
+  color: var(--lacquer-gold);
+  margin-bottom: 1.5rem;
+}
+
+.affirmation-text {
+  font-size: 1.3rem;
+  line-height: 2;
+  color: var(--ink-black);
+  font-weight: 500;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Call to Action */
+.call-to-action {
+  padding: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.call-to-action h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.action-item {
+  padding: 0;
+  background: transparent;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.action-item:hover {
+  transform: translateY(-1px);
+}
+
+.action-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.action-item p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink-black);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .achievements-grid,
+  .factors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-item {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-number {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+
+  .sites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sites-images {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .action-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,414 @@
+/* XÓA TẤT CẢ NỘI DUNG CŨ VÀ THAY BẰNG CODE MỚI DƯỚI ĐÂY */
+
+/* ==========================================
+   FOUNDATION SECTION - NO CARD DESIGN
+   ========================================== */
+
+.foundation-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* ==========================================
+   SECTION BLOCKS - NO BACKGROUND CARDS
+   ========================================== */
+
+.section-block {
+  margin-bottom: 4rem;
+  padding: 0; /* NO padding background */
+}
+
+/* ==========================================
+   SUBSECTION HEADERS
+   ========================================== */
+
+.subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--lacquer-gold);
+}
+
+.subsection-number {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lacquer-red);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.subsection-title {
+  flex: 1;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin: 0;
+}
+
+/* ==========================================
+   CONTEXT SECTIONS - NO BORDER
+   ========================================== */
+
+.context-section {
+  margin-bottom: 3rem;
+  padding-left: 0;
+  background: transparent;
+}
+
+/* ==========================================
+   CONTEXT TITLES
+   ========================================== */
+
+.context-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title-marker {
+  color: var(--lacquer-gold);
+  font-size: 1.2rem;
+}
+
+/* ==========================================
+   SPLIT CONTENT LAYOUTS
+   ========================================== */
+
+.split-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.split-content.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.split-content.reverse .image-content {
+  order: -1;
+}
+
+/* ==========================================
+   TEXT CONTENT BLOCKS - NO CARDS
+   ========================================== */
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.favorable-block,
+.challenges-block,
+.region-info {
+  padding: 0; /* NO padding, direct text on page background */
+  margin-bottom: 1.5rem;
+  background: transparent; /* NO background */
+}
+
+.block-label {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.block-label.favorable {
+  color: var(--jade-green);
+  border-bottom-color: var(--jade-green);
+}
+
+.block-label.challenges {
+  color: var(--lacquer-red);
+  border-bottom-color: var(--lacquer-red);
+}
+
+.context-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  text-align: justify;
+  margin: 0.5rem 0;
+}
+
+/* ==========================================
+   CHALLENGES LIST
+   ========================================== */
+
+.challenges-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0;
+}
+
+.challenge-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink-black);
+}
+
+.challenge-item::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--lacquer-red);
+  font-weight: bold;
+}
+
+/* ==========================================
+   REGION INFO - NORTH & SOUTH
+   ========================================== */
+
+.region-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.region-info.north .region-label {
+  color: var(--jade-green);
+  border-bottom-color: var(--jade-green);
+}
+
+.region-info.south .region-label {
+  color: var(--lacquer-red);
+  border-bottom-color: var(--lacquer-red);
+}
+
+.region-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  margin-bottom: 0.8rem;
+}
+
+/* ==========================================
+   TERROR WARNING - MINIMAL STYLE
+   ========================================== */
+
+.terror-warning {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: transparent;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--lacquer-red);
+}
+
+/* ==========================================
+   IMAGE CONTENT
+   ========================================== */
+
+.image-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.image-caption {
+  text-align: center;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--museum-brown);
+  margin-top: 0.5rem;
+}
+
+/* ==========================================
+   STRATEGY INTRODUCTION
+   ========================================== */
+
+.strategy-intro {
+  margin-bottom: 2rem;
+  padding: 0;
+  background: transparent;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.common-goal {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin: 0;
+}
+
+/* ==========================================
+   STRATEGIES COMPARISON - NO BORDERS
+   ========================================== */
+
+.strategies-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.strategy-block {
+  padding: 0;
+  background: transparent;
+}
+
+.strategy-region {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 0.5rem;
+}
+
+.strategy-block.north .strategy-region {
+  color: var(--jade-green);
+}
+
+.strategy-type {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--lacquer-gold);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+}
+
+.strategy-details p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+  color: var(--ink-black);
+}
+
+.role-highlight {
+  font-weight: 600;
+  color: var(--lacquer-red);
+}
+
+/* ==========================================
+   TABLE WRAPPER
+   ========================================== */
+
+.table-wrapper {
+  margin: 2rem 0;
+}
+
+.table-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comparison-table thead {
+  background: var(--lacquer-red);
+  color: white;
+}
+
+.comparison-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.comparison-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+  line-height: 1.6;
+}
+
+.comparison-table tbody tr:hover {
+  background: rgba(212, 165, 116, 0.08);
+}
+
+.region-cell {
+  font-weight: 600;
+  color: var(--lacquer-red);
+}
+
+.role-cell {
+  font-weight: 600;
+  color: var(--jade-green);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+  .split-content,
+  .split-content.reverse,
+  .strategies-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .split-content.reverse .image-content {
+    order: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .foundation-section {
+    padding: 2rem 1rem;
+  }
+
+  .subsection-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+
+  .context-title {
+    font-size: 1.3rem;
+  }
+
+  .comparison-table {
+    font-size: 0.85rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.7rem;
+  }
+}

@@ -1,0 +1,1047 @@
+/* Museum Page - Main Styles */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap");
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed header */
+}
+
+.museum-layout {
+  min-height: 100vh;
+  background: var(--museum-cream);
+  font-family: "Fraunces", serif;
+}
+
+.museum-content {
+  background: var(--museum-cream);
+  position: relative;
+}
+
+/* Chapter Navigation Buttons - Circular like AI button */
+.chapter-navigation-buttons {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-btn-circle {
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.nav-btn-circle:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 6px 20px rgba(139, 26, 26, 0.6) !important;
+  opacity: 0.9;
+}
+
+.nav-btn-circle:active {
+  transform: scale(0.95) !important;
+}
+
+/* Chapter Indicator */
+.chapter-indicator {
+  background: var(--lacquer-red);
+  color: var(--lacquer-gold);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 2px solid var(--lacquer-gold);
+  box-shadow: 0 2px 8px rgba(139, 26, 26, 0.3);
+  white-space: nowrap;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .chapter-navigation-buttons {
+    right: 15px;
+    gap: 10px;
+  }
+
+  .nav-btn-circle {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .nav-btn-circle .anticon {
+    font-size: 20px !important;
+  }
+
+  .chapter-indicator {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chapter-navigation-buttons {
+    right: 10px;
+    bottom: 80px;
+    top: auto;
+    transform: none;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .nav-btn-circle {
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
+
+/* Magazine-style article wrapper */
+.museum-article {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.85)
+  );
+  /* additional subtle paper texture can be added later */
+}
+
+/* Per-section background themes (text will overlay images) */
+.magazine-section {
+  position: relative;
+  color: var(--ink-black);
+  overflow: visible;
+}
+
+.magazine-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.08;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0.2) contrast(0.9);
+}
+
+.magazine-section .section-header,
+.magazine-section .section-subtitle,
+.magazine-section .section-years,
+.magazine-section .section-roman,
+.magazine-section > * {
+  position: relative;
+  z-index: 2; /* ensure text sits above background */
+}
+
+/* Example background images for each major section - replace URLs as desired */
+.bg-foundation::before {
+  background-image: url("/images/foundation-bg.svg");
+}
+.bg-strategy::before {
+  background-image: url("/images/strategy-bg.svg");
+}
+.bg-north::before {
+  background-image: url("/images/north-bg.svg");
+}
+.bg-south::before {
+  background-image: url("/images/south-bg.svg");
+}
+.bg-victory::before {
+  background-image: url("/images/victory-bg.svg");
+}
+.bg-orientation::before {
+  background-image: url("/images/orientation-bg.svg");
+}
+
+/* Remove card backgrounds — text will appear directly on the section background */
+.content-card,
+.highlight-box,
+.quote-box,
+.mosaic-section,
+.story-content-brief,
+.image-story-container .expanded-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Improve text contrast when placed directly on decorative backgrounds */
+.magazine-section {
+  color: var(--ink-black);
+}
+.magazine-section .content-title,
+.magazine-section .section-title,
+.magazine-section .subsection-title {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Headings with magazine typography */
+.section-title,
+.subsection-title {
+  font-family: "Fraunces", serif;
+  letter-spacing: 0.02em;
+}
+
+/* Make images feel embedded into the paper */
+.image-wrapper img,
+.mosaic-img,
+.gallery-item img {
+  mix-blend-mode: multiply;
+}
+
+/* Responsive tweaks specifically for magazine look */
+@media (max-width: 768px) {
+  .magazine-section::before {
+    opacity: 0.06;
+    background-position: center top;
+  }
+  .content-card,
+  .highlight-box {
+    background: rgba(255, 255, 255, 0.96);
+  }
+}
+
+/* Section Styling */
+.museum-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 3rem;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.section-roman {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--lacquer-red);
+  letter-spacing: 0.3em;
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin: 1.5rem 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(139, 26, 26, 0.1);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--lacquer-gold),
+    transparent
+  );
+}
+
+.section-years {
+  font-size: 2rem;
+  color: var(--lacquer-gold);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin: 2rem 0 1rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--lacquer-gold);
+  border-radius: 50px;
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.section-subtitle {
+  font-size: 1.4rem;
+  color: var(--jade-green);
+  font-style: italic;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+/* Dividers */
+/* Divider hoài cổ, giảm emoji, dùng font Georgia */
+.museum-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem auto;
+  max-width: 1200px;
+  padding: 0 3rem;
+}
+.divider-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--lacquer-gold) 20%,
+    var(--lacquer-gold) 80%,
+    transparent
+  );
+}
+.divider-ornament {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  color: var(--lacquer-gold);
+  padding: 0 1.5rem;
+  opacity: 0.85;
+  letter-spacing: 0.1em;
+  animation: none;
+}
+/* Mosaic Section - hỗ trợ layout bất quy tắc, hoài cổ */
+.mosaic-section {
+  margin: 6rem auto;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #faf3e0 80%, #e6d3b3 100%);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(139, 26, 26, 0.08);
+  max-width: 1400px;
+}
+.mosaic-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.mosaic-title {
+  font-size: 2.8rem;
+  font-family: "Fraunces", serif;
+  color: var(--lacquer-red, #bf092f);
+  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+}
+.mosaic-desc {
+  font-size: 1.2rem;
+  color: var(--text-brown, #8b4513);
+  font-style: italic;
+}
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
+}
+.mosaic-item {
+  position: relative;
+  overflow: visible;
+  transition: transform 0.3s;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(139, 26, 26, 0.07);
+  border: 2px solid var(--lacquer-gold, #ffc400);
+}
+.mosaic-item:hover {
+  transform: scale(1.04) translateY(-6px);
+  z-index: 2;
+}
+.mosaic-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
+  border: none;
+  box-shadow: 0 2px 12px rgba(139, 26, 26, 0.09);
+}
+.shape-circle .mosaic-img {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 0 0 6px var(--lacquer-gold, #ffc400);
+}
+.shape-square .mosaic-img {
+  border-radius: 16px;
+  aspect-ratio: 1/1;
+}
+.shape-landscape .mosaic-img {
+  border-radius: 24px;
+  aspect-ratio: 3/2;
+}
+.shape-portrait .mosaic-img {
+  border-radius: 24px;
+  aspect-ratio: 2/3;
+}
+.mosaic-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, #faf3e0 90%, transparent 100%);
+  padding: 1.2rem 1rem 1.8rem 1rem;
+  border-radius: 0 0 18px 18px;
+  text-align: left;
+  opacity: 0.96;
+}
+.mosaic-caption {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--lacquer-red, #bf092f);
+  margin-bottom: 0.5rem;
+  font-family: "Fraunces", serif;
+}
+.mosaic-content {
+  font-size: 1rem;
+  color: var(--text-brown, #8b4513);
+  font-style: italic;
+}
+@media (max-width: 768px) {
+  .mosaic-section {
+    padding: 2rem 0.5rem;
+  }
+  .mosaic-title {
+    font-size: 2rem;
+  }
+  .mosaic-grid {
+    gap: 1.2rem;
+  }
+}
+
+/* Subsection Styling - Removed .subsection class */
+
+.subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 3rem 0 3rem 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+}
+
+.subsection-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4rem;
+  height: 4rem;
+  background: var(--lacquer-gold);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.subsection-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin: 0;
+  flex: 1;
+}
+
+/* Content Cards */
+.content-card {
+  background: white;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  border-radius: 12px;
+  border: 2px solid var(--museum-beige);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(139, 26, 26, 0.1);
+  border-color: var(--lacquer-gold);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--museum-beige);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin: 0;
+}
+
+.card-content {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--ink-black);
+}
+
+.card-content p {
+  margin: 1rem 0;
+}
+
+.card-content strong {
+  color: var(--lacquer-red);
+  font-weight: 600;
+}
+
+.card-content em {
+  color: var(--jade-green);
+  font-style: italic;
+}
+
+/* Highlight Text */
+.highlight-box {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 26, 26, 0.08),
+    rgba(212, 175, 55, 0.08)
+  );
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--lacquer-red);
+  margin: 2rem 0;
+}
+
+.highlight-text {
+  background: rgba(212, 175, 55, 0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  color: var(--lacquer-red);
+}
+
+/* Quote Box */
+.quote-box {
+  background: linear-gradient(
+    135deg,
+    rgba(92, 122, 107, 0.1),
+    rgba(245, 241, 232, 0.9)
+  );
+  padding: 3rem;
+  border-radius: 16px;
+  border: 3px double var(--lacquer-gold);
+  text-align: center;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.quote-box::before,
+.quote-box::after {
+  content: '"';
+  font-size: 6rem;
+  color: var(--lacquer-gold);
+  opacity: 0.3;
+  position: absolute;
+  font-family: Georgia, serif;
+}
+
+.quote-box::before {
+  top: -1rem;
+  left: 2rem;
+}
+
+.quote-box::after {
+  bottom: -3rem;
+  right: 2rem;
+}
+
+.quote-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--lacquer-red);
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  color: var(--jade-green);
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+/* Image Styling */
+.museum-image {
+  width: 100%;
+  border-radius: 8px;
+  border: 4px solid var(--lacquer-gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin: 2rem 0;
+}
+
+.image-caption {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--jade-green);
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* List Styling */
+.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.custom-list li {
+  padding: 1rem 1rem 1rem 3rem;
+  margin: 0.8rem 0;
+  background: rgba(245, 241, 232, 0.5);
+  border-left: 3px solid var(--jade-green);
+  border-radius: 8px;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+.custom-list li:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateX(5px);
+}
+
+.custom-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 1rem;
+  color: var(--lacquer-gold);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .museum-section {
+    padding: 4rem 2rem;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+  }
+
+  .section-years {
+    font-size: 1.6rem;
+  }
+
+  /* Removed .subsection padding */
+}
+
+@media (max-width: 768px) {
+  .museum-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-roman {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-years {
+    font-size: 1.3rem;
+    padding: 0.4rem 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .subsection-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .subsection-title {
+    font-size: 1.8rem;
+  }
+
+  .content-card {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1.3rem;
+  }
+
+  .museum-divider {
+    margin: 3rem auto;
+  }
+
+  .divider-ornament {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-years {
+    font-size: 1.1rem;
+  }
+
+  /* Removed .subsection padding */
+
+  .content-card {
+    padding: 1.2rem;
+  }
+
+  .quote-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.museum-section {
+  scroll-margin-top: 80px;
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.museum-section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* ========== IMAGE-FOCUSED LAYOUT SYSTEM ========== */
+
+/* Image Story Container - Layout tập trung vào hình ảnh */
+.image-story-container {
+  margin: 4rem 0;
+}
+
+.story-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+
+.story-block.reverse {
+  direction: rtl;
+}
+
+.story-block.reverse > * {
+  direction: ltr;
+}
+
+.story-block.full-width {
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+.story-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(139, 26, 26, 0.2);
+  border: 4px solid var(--lacquer-gold);
+  transition: all 0.4s ease;
+}
+
+.story-image-wrapper:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(139, 26, 26, 0.3);
+}
+
+.story-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.story-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(139, 26, 26, 0.95) 0%,
+    transparent 100%
+  );
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.story-content-brief {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 3px solid var(--museum-beige);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.story-content-brief h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 1.5rem;
+}
+
+.story-content-brief p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--ink-black);
+  margin-bottom: 1.5rem;
+}
+
+.key-point {
+  background: rgba(212, 175, 55, 0.25);
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 700;
+  color: var(--lacquer-red);
+}
+
+.expand-button {
+  background: var(--lacquer-red) !important;
+  border-color: var(--lacquer-red) !important;
+  color: white !important;
+  font-weight: 600;
+  height: auto;
+  padding: 0.7rem 2rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.expand-button:hover {
+  background: var(--jade-green) !important;
+  border-color: var(--jade-green) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(92, 122, 107, 0.4);
+}
+
+.expanded-content {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: rgba(245, 241, 232, 0.6);
+  border-left: 5px solid var(--jade-green);
+  border-radius: 10px;
+  animation: slideDown 0.4s ease;
+}
+
+.expanded-content p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--ink-black);
+  margin: 1rem 0;
+}
+
+.expanded-content strong {
+  color: var(--lacquer-red);
+}
+
+.expanded-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.expanded-content li {
+  padding: 0.6rem 0 0.6rem 2rem;
+  position: relative;
+  line-height: 1.8;
+}
+
+.expanded-content li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--lacquer-gold);
+  font-size: 1.2rem;
+}
+
+/* Image Gallery - Hiển thị nhiều hình */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(139, 26, 26, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  aspect-ratio: 4/3;
+  border: 3px solid var(--lacquer-gold);
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(139, 26, 26, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(139, 26, 26, 0.95) 0%,
+    rgba(139, 26, 26, 0.7) 50%,
+    transparent 100%
+  );
+  color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  padding-bottom: 2.5rem;
+}
+
+.gallery-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-description {
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+/* Aspect Ratios Standard */
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-circle {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+/* Responsive cho Image-Focused Layout */
+@media (max-width: 1024px) {
+  .story-block {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .story-block.reverse {
+    direction: ltr;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-story-container {
+    margin: 2rem 0;
+  }
+
+  .story-block {
+    margin-bottom: 2rem;
+  }
+
+  .story-content-brief {
+    padding: 1.5rem;
+  }
+
+  .story-content-brief h4 {
+    font-size: 1.6rem;
+  }
+
+  .story-content-brief p {
+    font-size: 1.05rem;
+  }
+
+  .story-image-caption {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .expand-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .expanded-content {
+    padding: 1.5rem;
+  }
+}

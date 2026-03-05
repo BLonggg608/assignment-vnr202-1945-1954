@@ -1,0 +1,549 @@
+/* ===================================================================
+   SOUTH SECTION - CHAPTER IV (NO CARD DESIGN)
+   Theme: Victory, Strategic Leadership, Historic Moments
+   Following convention: NO CARD, NO EMOJI, NO EFFECTS
+   =================================================================== */
+
+/* ==========================================
+   MAIN SECTION
+   ========================================== */
+
+.south-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* ==========================================
+   SECTION BLOCKS - NO BACKGROUND
+   ========================================== */
+
+.section-block {
+  margin-bottom: 4rem;
+  padding: 0;
+}
+
+/* ==========================================
+   SUBSECTION HEADERS
+   ========================================== */
+
+.subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--lacquer-red);
+}
+
+.subsection-number {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lacquer-red);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.subsection-title {
+  flex: 1;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.subsection-header .ant-btn {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   CONTENT SECTIONS
+   ========================================== */
+
+.content-section {
+  margin-bottom: 3rem;
+  padding: 0;
+  background: transparent;
+}
+
+.content-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+}
+
+.content-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.content-text strong {
+  color: var(--lacquer-red);
+  font-weight: 600;
+}
+
+/* ==========================================
+   EMPHASIS & HIGHLIGHT BLOCKS - NO CARD
+   ========================================== */
+
+.emphasis-block {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-red);
+  margin: 2rem 0;
+}
+
+.emphasis-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  margin: 0.5rem 0;
+}
+
+.strategic-quote {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-gold);
+  margin: 2rem 0;
+}
+
+.strategic-quote p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--lacquer-red);
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ==========================================
+   GRID LAYOUTS
+   ========================================== */
+
+.split-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+.split-content.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.split-content.reverse .image-content {
+  order: -1;
+}
+
+.three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* ==========================================
+   IMAGE COMPONENTS
+   ========================================== */
+
+.image-wrapper {
+  text-align: center;
+}
+
+.image-caption {
+  font-size: 0.95rem;
+  color: var(--museum-brown);
+  font-style: italic;
+  margin-top: 0.75rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   TEXT BLOCKS - NO CARDS
+   ========================================== */
+
+.text-block {
+  padding: 0;
+  background: transparent;
+  margin-bottom: 2rem;
+}
+
+.text-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  margin-bottom: 1rem;
+}
+
+.text-block ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.text-block li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  color: var(--ink-black);
+}
+
+/* ==========================================
+   INFO ITEMS - SIMPLE LIST
+   ========================================== */
+
+.info-item {
+  padding: 0;
+  background: transparent;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.info-item strong {
+  color: var(--lacquer-red);
+  font-weight: 600;
+}
+
+/* ==========================================
+   LESSON LEARNED BLOCK - BORDER LEFT ONLY
+   ========================================== */
+
+.lesson-block {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--jade-green);
+  margin: 2rem 0;
+}
+
+.lesson-block h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--jade-green);
+  margin-bottom: 1rem;
+}
+
+.lesson-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  margin: 0.5rem 0;
+}
+
+/* ==========================================
+   VICTORY ACHIEVEMENTS - BORDER LEFT ONLY
+   ========================================== */
+
+.achievement-block {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-gold);
+  margin: 2rem 0;
+}
+
+.achievement-block h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 1rem;
+}
+
+.achievement-block ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.achievement-block li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  color: var(--ink-black);
+}
+
+/* ==========================================
+   KEY DECISIONS GRID
+   ========================================== */
+
+.key-decisions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
+.decision-card {
+  padding: 0;
+  background: transparent;
+}
+
+.decision-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.decision-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-black);
+  margin: 0;
+}
+
+/* ==========================================
+   CAMPAIGN INFO - SIMPLE STATS
+   ========================================== */
+
+.campaign-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: var(--museum-brown);
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+}
+
+/* ==========================================
+   TIMELINE - SIMPLE DESIGN
+   ========================================== */
+
+.timeline-section {
+  margin: 2rem 0;
+  padding: 0 0 0 2rem;
+  border-left: 4px solid var(--lacquer-gold);
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.timeline-date {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-event {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+}
+
+/* ==========================================
+   HISTORIC MOMENT - CENTERED TEXT
+   ========================================== */
+
+.historic-moment {
+  margin: 3rem 0;
+  padding: 0 0 0 2rem;
+  border-left: 4px solid var(--lacquer-red);
+}
+
+.historic-time {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 0.5rem;
+}
+
+.historic-date {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--lacquer-gold);
+  margin-bottom: 1rem;
+}
+
+.historic-event {
+  font-size: 1.2rem;
+  color: var(--ink-black);
+  margin: 1rem 0;
+  line-height: 1.8;
+}
+
+.historic-meaning {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+/* ==========================================
+   LESSONS GRID - NO CARD
+   ========================================== */
+
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
+.lesson-item {
+  padding: 0;
+  background: transparent;
+}
+
+.lesson-item h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+}
+
+.lesson-item p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-black);
+  margin: 0;
+}
+
+/* ==========================================
+   MODAL CONTENT
+   ========================================== */
+
+.modal-content h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(212, 165, 116, 0.3);
+}
+
+.modal-content h4:first-child {
+  margin-top: 0;
+}
+
+.modal-content p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.modal-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content li {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.modal-content strong {
+  color: var(--lacquer-red);
+  font-weight: 600;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+  .split-content,
+  .split-content.reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .three-column-grid,
+  .key-decisions-grid,
+  .lessons-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .campaign-stats {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .south-section {
+    padding: 2rem 1rem;
+  }
+
+  .subsection-header {
+    flex-wrap: wrap;
+  }
+
+  .subsection-number {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+
+  .content-heading {
+    font-size: 1.3rem;
+  }
+
+  .content-text {
+    font-size: 1rem;
+  }
+
+  .historic-time {
+    font-size: 1.5rem;
+  }
+
+  .historic-date {
+    font-size: 1.1rem;
+  }
+
+  .stat-value {
+    font-size: 1.3rem;
+  }
+}

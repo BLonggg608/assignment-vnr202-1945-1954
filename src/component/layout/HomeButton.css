@@ -1,0 +1,75 @@
+/* Home Button - Bottom Left Corner */
+.home-button-container {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 998; /* Below chatbot but above content */
+}
+
+.home-btn-circle {
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px !important;
+  min-height: 60px !important;
+  border-radius: 50% !important;
+  background: var(--lacquer-red) !important;
+  border: 3px solid var(--lacquer-gold) !important;
+  box-shadow: 0 4px 12px rgba(139, 26, 26, 0.4) !important;
+  transition: all 0.3s ease;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+}
+
+.home-btn-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(139, 26, 26, 0.6) !important;
+  background: var(--lacquer-red-light) !important;
+}
+
+.home-btn-circle:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(139, 26, 26, 0.4) !important;
+}
+
+.home-btn-circle .anticon {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-button-container {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .home-btn-circle {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+  }
+
+  .home-btn-circle .anticon {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-button-container {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .home-btn-circle {
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px !important;
+    min-height: 45px !important;
+  }
+
+  .home-btn-circle .anticon {
+    font-size: 18px !important;
+  }
+}

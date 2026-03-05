@@ -1,0 +1,81 @@
+/* Floating Chatbot Button */
+.floating-chatbot-button {
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.floating-chatbot-button:hover {
+  opacity: 0.9;
+}
+
+.floating-chatbot-button.dragging {
+  opacity: 0.7;
+  cursor: grabbing !important;
+}
+
+.floating-chatbot-button button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(139, 26, 26, 0.6) !important;
+}
+
+.floating-chatbot-button.dragging button {
+  transform: scale(0.95);
+}
+
+/* Chatbot Hint Tooltip */
+.chatbot-hint {
+  position: absolute;
+  top: 50%;
+  right: 70px;
+  transform: translateY(-50%);
+  background: var(--paper-white);
+  color: var(--lacquer-red);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--lacquer-gold);
+  pointer-events: none;
+  animation: hintPulse 2s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.chatbot-hint::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid var(--paper-white);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .floating-chatbot-button button {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .floating-chatbot-button button svg {
+    font-size: 20px !important;
+  }
+
+  .chatbot-hint {
+    display: none;
+  }
+}

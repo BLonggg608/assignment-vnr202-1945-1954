@@ -1,0 +1,298 @@
+/* StrategySection.css - Chapter II Styling */
+
+.strategy-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* Resolution Block */
+.resolution-block {
+  margin-bottom: 4rem;
+}
+
+.subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--lacquer-gold);
+}
+
+.subsection-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  height: 3rem;
+  background: var(--lacquer-red);
+  color: white;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.subsection-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin: 0;
+  flex: 1;
+}
+
+.context-warning {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-red);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--lacquer-red);
+  font-weight: 500;
+}
+
+.key-decisions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.decision-card {
+  padding: 0;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.decision-card:hover {
+  transform: translateY(-1px);
+}
+
+.decision-header {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.decision-card.highlight .decision-header {
+  border-bottom-color: var(--lacquer-red);
+}
+
+.decision-card.success .decision-header {
+  border-bottom-color: var(--jade-green);
+  color: var(--jade-green);
+}
+
+.decision-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-black);
+  margin: 0;
+}
+
+/* Đồng Khởi Block */
+.dongkhoi-block {
+  margin-bottom: 4rem;
+}
+
+.content-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+}
+
+.split-image-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+.info-item {
+  padding: 0;
+  background: transparent;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.info-item strong {
+  color: var(--lacquer-red);
+  font-weight: 600;
+}
+
+.achievement-box {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--jade-green);
+  margin-top: 2rem;
+}
+
+.achievement-box strong {
+  color: var(--jade-green);
+  font-size: 1.1rem;
+}
+
+.achievement-box ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.achievement-box li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.image-caption {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-style: italic;
+  color: var(--museum-brown);
+  font-size: 0.95rem;
+}
+
+/* Special War Content */
+.war-response-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.response-card {
+  padding: 0;
+  background: transparent;
+}
+
+.response-card h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.response-card.party-response h5 {
+  color: var(--jade-green);
+  border-bottom-color: var(--jade-green);
+}
+
+.response-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: var(--ink-black);
+}
+
+/* Victories Section */
+.victories-section {
+  margin-top: 3rem;
+  padding: 0;
+  background: transparent;
+}
+
+.victories-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--lacquer-gold);
+}
+
+.victories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.victory-card {
+  padding: 0;
+  background: transparent;
+  transition: transform 0.2s ease;
+}
+
+.victory-card:hover {
+  transform: translateY(-1px);
+}
+
+.victory-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.victory-date {
+  font-size: 1rem;
+  color: var(--museum-brown);
+  margin: 0.75rem 0;
+  font-weight: 500;
+}
+
+.victory-significance {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+}
+
+.final-outcome {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--jade-green);
+  margin-top: 3rem;
+}
+
+.final-outcome strong {
+  color: var(--jade-green);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.final-outcome p {
+  margin-top: 1rem;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .split-image-content,
+  .war-response-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .key-decisions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .subsection-header {
+    flex-wrap: wrap;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+
+  .victories-grid {
+    grid-template-columns: 1fr;
+  }
+}

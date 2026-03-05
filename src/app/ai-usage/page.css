@@ -1,0 +1,283 @@
+/* page.css - AI usage report page with clean, simple design */
+.ai-report {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  color: var(--ink-black, #2c1810);
+  background: var(--museum-cream, #f5f1e8);
+}
+
+.section-header {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 26, 26, 0.05),
+    rgba(212, 175, 55, 0.05)
+  );
+  border-radius: 12px;
+}
+
+.section-title {
+  font-family: var(--font-fraunces, serif);
+  color: var(--lacquer-red, #8b1a1a);
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.project-info {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.project-info p {
+  margin: 0.25rem 0;
+}
+
+.meta {
+  color: var(--museum-brown, #8b6f47);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.subsection-title {
+  color: var(--lacquer-red, #8b1a1a);
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.section-subtitle {
+  color: var(--museum-brown, #8b6f47);
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.report-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.info-box {
+  padding: 1.25rem;
+  background: rgba(212, 165, 116, 0.08);
+  border-radius: 8px;
+  line-height: 1.8;
+}
+
+.info-box p {
+  margin: 0.5rem 0;
+}
+
+.info-box a {
+  color: var(--lacquer-red, #8b1a1a);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.info-box a:hover {
+  text-decoration: underline;
+}
+
+.tools-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.98rem;
+}
+
+.tools-table th,
+.tools-table td {
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+  text-align: left;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+}
+
+.tools-table thead th {
+  color: var(--lacquer-red, #8b1a1a);
+  font-weight: 600;
+}
+
+.responsibilities td {
+  padding-right: 1rem;
+}
+
+/* Logo styling - individual sizes for each logo */
+.tool-logo {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.logo-img {
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Individual logo sizes */
+.logo-gemini {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-notebook {
+  width: 55px;
+  height: 35px;
+}
+
+.logo-github {
+  width: 48px;
+  height: 48px;
+}
+
+.logo-claude {
+  width: 45px;
+  height: 45px;
+}
+
+.logo-chatgpt {
+  width: 42px;
+  height: 42px;
+}
+
+.logo-grok {
+  width: 48px;
+  height: 48px;
+}
+
+.tool-name {
+  font-weight: 600;
+  color: var(--lacquer-red, #8b1a1a);
+}
+
+/* Table row alternation & stronger separators */
+.tools-table tbody tr:nth-child(even) {
+  background: rgba(212, 165, 116, 0.02);
+}
+.tools-table tbody tr:hover {
+  background: rgba(139, 26, 26, 0.03);
+}
+
+/* Divider style */
+.divider {
+  height: 2px;
+  margin: 2rem 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 26, 26, 0.2),
+    transparent
+  );
+}
+
+/* Workflow steps */
+.workflow-step {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: rgba(212, 165, 116, 0.05);
+  border-left: 4px solid var(--lacquer-gold, #d4af37);
+  border-radius: 4px;
+}
+
+.step-title {
+  color: var(--lacquer-red, #8b1a1a);
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.workflow-step p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.simple-list {
+  margin: 0.75rem 0 0 1.25rem;
+  line-height: 1.8;
+}
+
+.simple-list li {
+  margin: 0.5rem 0;
+}
+
+/* Responsibility section */
+.responsibility-note {
+  padding: 1rem;
+  background: rgba(139, 26, 26, 0.05);
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+  color: var(--museum-brown, #8b6f47);
+}
+
+/* Conclusion boxes */
+.conclusion-box {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.conclusion-box.positive {
+  background: rgba(212, 165, 116, 0.08);
+  border-left: 5px solid var(--lacquer-gold, #d4af37);
+}
+
+.conclusion-box.limitation {
+  background: rgba(139, 26, 26, 0.05);
+  border-left: 5px solid var(--lacquer-red, #8b1a1a);
+}
+
+.conclusion-title {
+  color: var(--lacquer-red, #8b1a1a);
+  font-size: 1.15rem;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.final-statement {
+  padding: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.1),
+    rgba(139, 26, 26, 0.05)
+  );
+  border-radius: 12px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.final-statement p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+  color: var(--ink-black, #2c1810);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ai-report {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .section-header {
+    padding: 1.5rem;
+  }
+  .report-section {
+    padding: 1rem;
+  }
+  .tools-table {
+    font-size: 0.9rem;
+  }
+}

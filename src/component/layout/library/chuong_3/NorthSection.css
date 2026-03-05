@@ -1,0 +1,892 @@
+/* ==========================================
+   NORTH SECTION - CHAPTER III STYLING
+   ========================================== */
+
+.north-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* ==========================================
+   SECTION BLOCKS - NO BACKGROUND CARDS
+   ========================================== */
+
+.section-block {
+  margin-bottom: 4rem;
+  padding: 0; /* NO padding background */
+}
+
+/* ==========================================
+   SUBSECTION HEADERS
+   ========================================== */
+
+.subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--lacquer-gold);
+}
+
+.subsection-number {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--jade-green);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.subsection-title {
+  flex: 1;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--jade-green);
+  margin: 0;
+}
+
+/* ==========================================
+   CONTENT SECTIONS
+   ========================================== */
+
+.content-section {
+  margin-bottom: 3rem;
+  padding: 0;
+  background: transparent;
+}
+
+.content-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  text-align: justify;
+  margin: 0.5rem 0;
+}
+
+/* ==========================================
+   STRATEGIC QUOTE BLOCK
+   ========================================== */
+
+.strategic-quote {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--jade-green);
+  margin-bottom: 3rem;
+}
+
+.strategic-quote p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ==========================================
+   HERO IMAGE
+   ========================================== */
+
+.hero-image-wrapper {
+  margin: 2rem 0 3rem;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-style: italic;
+  color: var(--museum-brown);
+  font-size: 0.95rem;
+}
+
+/* ==========================================
+   TEXT BLOCKS - NO CARDS
+   ========================================== */
+
+.text-block {
+  padding: 0;
+  background: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.text-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  margin-bottom: 1rem;
+}
+
+.text-block strong {
+  color: var(--lacquer-red);
+  font-weight: 600;
+}
+
+/* ==========================================
+   EMPHASIS QUOTE
+   ========================================== */
+
+.emphasis-quote {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-gold);
+  margin: 2rem 0;
+}
+
+.emphasis-quote p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--lacquer-red);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ==========================================
+   MOVEMENTS GRID
+   ========================================== */
+
+.movements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.movement-item {
+  padding: 0;
+  background: transparent;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.movement-item:hover {
+  transform: translateY(-2px);
+}
+
+.movement-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--jade-green);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--jade-green);
+  display: inline-block;
+}
+
+.movement-target {
+  font-size: 1.05rem;
+  color: var(--ink-black);
+  line-height: 1.7;
+}
+
+/* ==========================================
+   TWO COLUMN GRID LAYOUT
+   ========================================== */
+
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 2rem 0;
+  align-items: start;
+}
+
+/* ==========================================
+   SPECIFICATIONS GRID
+   ========================================== */
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.spec-item {
+  padding: 0;
+  background: transparent;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.spec-item:hover {
+  transform: translateY(-2px);
+}
+
+.spec-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.spec-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--jade-green);
+  margin-bottom: 0.5rem;
+}
+
+.spec-label {
+  font-size: 0.95rem;
+  color: var(--museum-brown);
+  line-height: 1.5;
+}
+
+/* ==========================================
+   STATS BLOCKS
+   ========================================== */
+
+.stats-block,
+.campaign-block {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--jade-green);
+  margin-bottom: 2.5rem;
+}
+
+.campaign-block {
+  border-left-color: var(--lacquer-red);
+}
+
+.stats-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--jade-green);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--ink-black);
+  line-height: 1.5;
+}
+
+/* ==========================================
+   DATA TABLE
+   ========================================== */
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.data-table thead th {
+  background: var(--jade-green);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.data-table tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Removed hover effect per convention */
+
+.table-label {
+  font-weight: 600;
+  color: var(--lacquer-red);
+}
+
+/* ==========================================
+   MODAL STYLES
+   ========================================== */
+
+.modal-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.modal-image-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.modal-image-item {
+  text-align: center;
+}
+
+.modal-caption {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--museum-brown);
+  margin-top: 0.5rem;
+}
+
+.modal-section {
+  margin: 1.5rem 0;
+}
+
+.modal-subheading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================
+   ENHANCED CONTENT BOXES - NO BACKGROUND
+   ========================================== */
+
+.info-box {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-gold);
+}
+
+.info-box.success-box {
+  border-left-color: var(--jade-green);
+}
+
+.info-box.achievement-box {
+  border-left-color: var(--lacquer-gold);
+}
+
+.info-box-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 1rem;
+}
+
+.info-box.success-box .info-box-title {
+  color: var(--jade-green);
+}
+
+.info-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.info-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink-black);
+}
+
+.info-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--jade-green);
+  font-weight: bold;
+}
+
+/* ==========================================
+   WARNING AND STRATEGY BOXES
+   ========================================== */
+
+.warning-box {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-red);
+  margin-bottom: 2rem;
+}
+
+.warning-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  margin: 0;
+}
+
+.highlight-term {
+  color: var(--lacquer-red);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--lacquer-red);
+  transition: all 0.2s ease;
+}
+
+.highlight-term:hover {
+  color: #c62828;
+  text-decoration-style: solid;
+}
+
+.section-subheading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--lacquer-red);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lacquer-gold);
+  display: inline-block;
+}
+
+.strategy-box,
+.result-box {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-gold);
+}
+
+.strategy-slogan {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--jade-green);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 0.95rem;
+  color: var(--museum-brown);
+  font-style: italic;
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+/* ==========================================
+   MOVEMENTS EXPANDED CARDS
+   ========================================== */
+
+.section-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.movements-grid-expanded {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.movement-card-expanded {
+  background: transparent;
+  padding: 0 0 0 2rem;
+  border-left: 4px solid var(--jade-green);
+  margin-bottom: 2rem;
+}
+
+.movement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--jade-green);
+}
+
+.movement-header.youth {
+  border-bottom-color: #2196f3;
+}
+
+.movement-header.women {
+  border-bottom-color: #e91e63;
+}
+
+.movement-header.farmer {
+  border-bottom-color: #4caf50;
+}
+
+.movement-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--jade-green);
+  margin: 0;
+}
+
+.movement-header.youth .movement-title {
+  color: #2196f3;
+}
+
+.movement-header.women .movement-title {
+  color: #e91e63;
+}
+
+.movement-header.farmer .movement-title {
+  color: #4caf50;
+}
+
+.movement-badge {
+  background: transparent;
+  color: var(--jade-green);
+  padding: 0.25rem 0.75rem;
+  border: 2px solid var(--jade-green);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.movement-header.youth .movement-badge {
+  color: #2196f3;
+  border-color: #2196f3;
+}
+
+.movement-header.women .movement-badge {
+  color: #e91e63;
+  border-color: #e91e63;
+}
+
+.movement-header.farmer .movement-badge {
+  color: #4caf50;
+  border-color: #4caf50;
+}
+
+.movement-content-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.movement-content-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-black);
+}
+
+.movement-content-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--jade-green);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.movement-image {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.movement-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.significance-box {
+  margin-top: 3rem;
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-gold);
+}
+
+.significance-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.significance-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  text-align: justify;
+  margin: 0;
+}
+
+/* ==========================================
+   IMAGE GRIDS
+   ========================================== */
+
+.image-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.image-item {
+  text-align: center;
+}
+
+.section-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1200px) {
+  .movements-grid-expanded {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .two-column-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   SECTION 3.2 - ĐƯỜNG HỒ CHÍ MINH STYLES
+   ========================================== */
+
+.founding-info-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 0 0 2rem;
+  background: transparent;
+  margin-bottom: 2rem;
+}
+
+.founding-detail {
+  text-align: center;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--museum-brown);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.detail-value {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--jade-green);
+  line-height: 1.5;
+}
+
+.commander-box {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--jade-green);
+}
+
+.commander-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 0.75rem;
+}
+
+.commander-detail {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-black);
+  margin: 0;
+}
+
+.spec-desc {
+  font-size: 0.9rem;
+  color: var(--museum-brown);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.construction-box {
+  margin-top: 2rem;
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--jade-green);
+}
+
+.construction-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--jade-green);
+  margin-bottom: 1rem;
+}
+
+.construction-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  text-align: justify;
+  margin: 0;
+}
+
+/* ==========================================
+   CHALLENGES GRID STYLES
+   ========================================== */
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.challenge-item {
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--lacquer-red);
+  margin-bottom: 2rem;
+}
+
+/* Remove emoji icons */
+
+.challenge-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--lacquer-red);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.challenge-detail {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-black);
+  text-align: justify;
+}
+
+.victory-spirit-box {
+  margin-top: 3rem;
+  padding: 0 0 0 2rem;
+  background: transparent;
+  border-left: 4px solid var(--jade-green);
+}
+
+.victory-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--jade-green);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.victory-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--ink-black);
+  text-align: justify;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .founding-info-box {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .north-section {
+    padding: 2rem 1rem;
+  }
+
+  .subsection-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .subsection-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+
+  .content-heading {
+    font-size: 1.3rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-image-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .founding-info-box {
+    padding: 1.5rem;
+  }
+}
