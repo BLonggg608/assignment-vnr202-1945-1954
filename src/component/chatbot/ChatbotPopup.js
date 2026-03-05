@@ -9,34 +9,34 @@ import remarkGfm from "remark-gfm";
 import { useAI } from "../../hooks/gemini-ai/use-ai";
 import "./ChatbotPopup.css";
 
-const suggestedPrompts = [
+export const suggestedPrompts = [
   {
-    title: "Hiệp định Giơnevơ và Bối cảnh 1954",
-    text: "Phân tích tác động của Hiệp định Giơnevơ (7/1954) đến việc hình thành đường lối chiến lược của Đảng",
+    title: "Tình thế ngàn cân treo sợi tóc",
+    text: "Phân tích bối cảnh 'ngàn cân treo sợi tóc' (1945-1946) và các biện pháp diệt giặc đói, giặc dốt của Đảng.",
   },
   {
-    title: "Đại hội III và Hai Nhiệm vụ Chiến lược",
-    text: "Giải thích tính độc lập, tự chủ của Đảng khi đề ra đường lối hai nhiệm vụ chiến lược tại Đại hội III (9/1960)",
+    title: "Sách lược Ngoại giao 1946",
+    text: "Giải thích sách lược 'Hòa để tiến' và ý nghĩa lịch sử của việc ký Hiệp định Sơ bộ (6/3/1946).",
   },
   {
-    title: "Nghị quyết 15 và Con đường Bạo lực Cách mạng",
-    text: "Phân tích tầm quan trọng của Nghị quyết 15 (1/1959) trong việc chuyển hướng cách mạng miền Nam",
+    title: "Đường lối Kháng chiến toàn quốc",
+    text: "Phân tích nội dung đường lối kháng chiến: toàn dân, toàn diện, trường kỳ, tự lực cánh sinh.",
   },
   {
-    title: "Phong trào Đồng Khởi 1960",
-    text: "Đánh giá ý nghĩa lịch sử của phong trào Đồng Khởi bắt đầu từ Bến Tre và lan rộng ra cả nước",
+    title: "Đỉnh cao Điện Biên Phủ 1954",
+    text: "Đánh giá ý nghĩa của quyết định chuyển phương châm sang 'Đánh chắc, tiến chắc' tại chiến dịch Điện Biên Phủ.",
   },
 ];
 
-const suggestionTags = [
-  "Hiệp định Giơnevơ 1954",
-  "Đại hội III và Hai nhiệm vụ",
-  "Nghị quyết 15",
-  "Phong trào Đồng Khởi 1960",
-  "Miền Bắc - Hậu phương",
-  "Đường Hồ Chí Minh",
-  "Mùa Xuân 1975",
-  "Thống nhất đất nước",
+export const suggestionTags = [
+  "Ngàn cân treo sợi tóc",
+  "Tuần lễ Vàng 1945",
+  "Hiệp định Sơ bộ 6/3",
+  "Toàn quốc kháng chiến",
+  "Việt Bắc Thu Đông 1947",
+  "Biên Giới 1950",
+  "Đại hội Đảng lần II",
+  "Điện Biên Phủ 1954",
 ];
 
 export default function ChatbotPopup({ onClose, buttonPosition }) {
@@ -61,6 +61,12 @@ export default function ChatbotPopup({ onClose, buttonPosition }) {
   const handleSend = async (text = input) => {
     if (!text.trim()) return;
 
+    // Filter out previous error or loading messages to avoid confusing the API
+    const historyList = messages.filter(
+      (m) => !m.isLoading && !m.text.includes("Xin lỗi, đã xảy ra lỗi"),
+    );
+    const currentInput = text;
+
     const userMessage = { text: text, isUser: true };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
@@ -68,7 +74,7 @@ export default function ChatbotPopup({ onClose, buttonPosition }) {
     const loadingMessage = { text: "", isUser: false, isLoading: true };
     setMessages((prev) => [...prev, loadingMessage]);
 
-    const response = await generateResponse(text);
+    const response = await generateResponse(historyList, currentInput);
 
     setMessages((prev) => {
       const newMessages = [...prev];
@@ -121,7 +127,7 @@ export default function ChatbotPopup({ onClose, buttonPosition }) {
 
   const switchSession = (sessionId) => {
     setSessions((prev) =>
-      prev.map((s) => ({ ...s, active: s.id === sessionId }))
+      prev.map((s) => ({ ...s, active: s.id === sessionId })),
     );
     setMessages([]);
     setSidebarOpen(false);
@@ -230,7 +236,7 @@ export default function ChatbotPopup({ onClose, buttonPosition }) {
           {messages.length === 0 ? (
             <div className="welcome-section">
               <div className="welcome-title">
-                Sự Lãnh đạo của Đảng CSVN (1954-1975)
+                Sự Lãnh đạo của Đảng CSVN (1945-1954)
               </div>
               <div className="welcome-subtitle">
                 Chọn một chủ đề hoặc đặt câu hỏi của bạn
@@ -323,18 +329,26 @@ export default function ChatbotPopup({ onClose, buttonPosition }) {
             autoSize={{ minRows: 1, maxRows: 3 }}
             style={{
               background: "transparent",
-              border: "none",
+              border: "1px solid #f2c2c2",
               resize: "none",
             }}
           />
           <Button
             type="primary"
+            shape="circle"
             icon={<SendHorizontal size={16} />}
             onClick={() => handleSend()}
             disabled={loading || !input.trim()}
             style={{
-              background: "var(--lacquer-red)",
+              backgroundColor: "var(--lacquer-red)",
+              borderStyle: "solid",
+              borderWidth: "1px",
               borderColor: "var(--lacquer-red)",
+              minWidth: "32px",
+              height: "32px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           />
         </div>
